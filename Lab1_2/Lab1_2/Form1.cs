@@ -55,6 +55,7 @@ namespace Lab1_2
             point[point.Length - 1].Y = e.Y;
             var copy = BitmapBuff.Clone(new Rectangle(0, 0, BitmapBuff.Width, BitmapBuff.Height), BitmapBuff.PixelFormat);
             undo.Push(copy);
+            redo.Push(copy);
             BitmapMain = new Bitmap(BitmapBuff);
             pictureBox.Image = BitmapMain;
         }
